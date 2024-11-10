@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="20dp"/> <!-- Bán kính bo tròn khi nhấn -->
+            <solid android:color="@color/orange" /> <!-- Màu nền khi nhấn -->
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="20dp"/> <!-- Bán kính bo tròn khi không nhấn -->
+            <solid android:color="@color/white" /> <!-- Màu nền khi không nhấn -->
+        </shape>
+    </item>
+</selector>

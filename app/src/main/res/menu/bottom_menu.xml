@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/home"
+          android:title="Trang chủ"
+        android:icon="@drawable/bottom_btn1"
+        app:cnb_iconColor="@color/white"
+        app:cnb_backgroundColor="@color/orange"/>
+    <item android:id="@+id/board"
+        android:title="Thành tích"
+        android:icon="@drawable/bottom_btn2"
+        app:cnb_iconColor="@color/white"
+        app:cnb_backgroundColor="@color/orange"/>
+    <item android:id="@+id/myQuiz"
+        android:title="Quiz của tôi"
+        android:icon="@drawable/bottom_btn3"
+        app:cnb_iconColor="@color/white"
+        app:cnb_backgroundColor="@color/orange"/>
+    <item android:id="@+id/profile"
+        android:title="Hồ sơ"
+        android:icon="@drawable/bottom_btn4"
+        app:cnb_iconColor="@color/white"
+        app:cnb_backgroundColor="@color/orange"/>
+</menu>

@@ -1,0 +1,155 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/buyCoinPage"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context="Activity.BuyCoinActivity">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/imageButtonBack"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/ripple_effect"
+        android:contentDescription="Back Button"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/icon_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- Coin Pricing Header -->
+    <TextView
+        android:id="@+id/pricingHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Bảng giá"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/imageButtonBack"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/> <!-- Thay đổi khoảng cách trên -->
+
+    <!-- Price for 10 Coins -->
+    <TextView
+        android:id="@+id/coinPrice10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 Coins = 20,000 VND"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/pricingHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"/>
+
+    <!-- Price for 50 Coins -->
+    <TextView
+        android:id="@+id/coinPrice50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50 Coins = 100,000 VND"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/coinPrice10"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"/>
+
+    <!-- Price for 100 Coins -->
+    <TextView
+        android:id="@+id/coinPrice100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 Coins = 200,000 VND"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/coinPrice50"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"/>
+
+    <!-- Price for 500 Coins -->
+    <TextView
+        android:id="@+id/coinPrice500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="500 Coins = 1,000,000 VND"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/coinPrice100"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"/>
+
+    <!-- QR Code Image -->
+    <ImageView
+        android:id="@+id/qrCodeImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+    android:layout_marginTop="24dp"
+    android:src="@drawable/qr"
+    app:layout_constraintTop_toBottomOf="@id/coinPrice500"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Input for Points to Buy -->
+    <EditText
+        android:id="@+id/editTextPoints"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nhập số points muốn mua"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/qrCodeImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp" />
+
+    <TextView
+        android:id="@+id/textViewAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tổng tiền: "
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextPoints"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/textViewAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/okButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Tổng tiền"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/green"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            />
+
+        <!-- Confirm Purchase Button -->
+        <Button
+            android:id="@+id/confirmButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Xác nhận giao dịch"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/purple"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
